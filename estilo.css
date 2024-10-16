@@ -104,14 +104,13 @@ position: relative;
     gap: 28px;
     margin-top: 5%;
 }
-
 #texto .title{
 font-size: 4rem;
 color: #1d1d1d;
 }
 #texto .desc{
     color: var(--cor4);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 #fto{
     display: flex;
@@ -282,7 +281,9 @@ border-radius: 25%;
     margin: 10px;
     word-wrap: break-word;
 }
+.bot { padding-top: -30px;}
 form{ 
+    color: #000;
     max-width: 400px;
             margin: auto;
             background: #fff;
@@ -291,7 +292,8 @@ form{
             box-shadow: 0 2px 10px var(--cor4);
             margin-bottom: 12%;
 }
-form>table{ text-align: center;
+form>table{ color: #000; 
+    text-align: center;
     margin: 20px auto;
 }td{ padding: 10px;}
 form>button{
@@ -302,6 +304,7 @@ form>button{
     padding: 10px  13px;
 }
 form>label{
+    color: #000;
     display: block;
     margin-bottom: 5px;
 }
@@ -335,7 +338,6 @@ footer>a{ color: whitesmoke; text-decoration: none;}
     width: 280px;
     height: 258px; transition: scale 0.5s ease;
 }
-.gallery>img:hover{ scale: 1.5;}
 .politica{
     width: 90%;
     max-width: 800px;
