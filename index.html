@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>AOBA</title>
+    <!--<meta name="color-scheme" content="ligth dark">-->
+    <link rel="shortcut icon" href="VERTICAL.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="acao.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+    <div id="logo">
+        <img src="" alt="">
+    </div>
+    <nav>
+        
+     <a href="historia.html">HISTÓRIA AOPA</a>
+     <a href="gap.html">GALERIA</a> 
+     <a href="contato.html">ENTRE EM CONTATO</a>   
+   
+    <div id="">
+    <input type="checkbox" name="change-theme" id="change-theme">
+       <label for="change-theme">
+    <i class="bi bi-sun"></i>
+    <i class="bi bi-moon"></i>  
+    </label>
+     </div>
+    </nav>
+</header>
+
+<section class="aa">
+    <div class="shape"></div>
+   <div id="texto">
+        <h1 class="title">Ser Pavoniano é</h1>
+        <p class="desc">Educar <span></span></p>
+    </div>
+    <div id="fto"><img class="f1" src="img/img2.png" alt=""></div>
+</section>
+
+<i class="bi bi-robot"  onclick="fazerRequisicao()">
+<span data-aos="fade-up" id="resultado"></span>    
+</i>
+
+<main class="container">
+   <section  data-aos="fade-right" id="assuntos">
+    <article class="sobre">
+        <h1 id="sobre ">SOBRE NÓS</h1>
+        <div class="text">
+            <p id="conteudo" class="conteudo">
+                A Associação das Obras Pavonianas de Assistência é uma instituição social católica, dos Religiosos Pavonianos, com sede em Belo Horizonte, que, pela experiência do seu fundador, São Ludovico Pavoni, dedica-se ao atendimento integral de crianças e à profissionalização de jovens e adultos. 
+                Nossa missão é promover e expandir o universo cultural e social das pessoas atendidas, por meio de atividades lúdicas, pedagógicas e profissionalizantes, que potencializem suas habilidades e ampliem suas oportunidades para o seu desenvolvimento humano e espiritual.
+            </p>  
+            <img class="imgs" src="sapiens.svg" alt="">
+        </div>
+        <button class="ler" id="btn-ler-mais">LER MAIS</button>
+    </article>
+</section>
+    </section>
+    <section id="noticias">
+        <article data-aos="fade-left">
+      <aside>
+    <p>Temos cursos profissionalizantes</p>
+      </aside>  
+        </article>
+
+<article data-aos="fade-up-left">
+    <aside class="ok">
+       <ul class="mini-calender">
+        <li> Seg</li>
+        <li> Ter</li>
+        <li>Qua</li>
+        <li> Qui</li>
+        <li>Sex </li>
+        <li> Sáb</li>
+     <li>Dom</li>
+       </ul>
+    </aside>
+</article>
+
+<article data-aos="fade-up">
+    
+    <aside id="rede" class="pop">
+        PAVONIANAS NAS REDES  
+    <a href="https://www.facebook.com/obrassociaispavonianas/?paipv=0&eav=AfbgcHuNIM9TR
+    oDl-gmViEAhwGbgi-O8-tvlirO3I1faOJemK9UYewxynx3erjxutIE&_rdr"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/obrassociaispavonianas/"><i class="bi bi-instagram"></i></a>
+    </aside></article>
+
+
+    </section>
+  
+</main>
+
+<footer>
+   <a href="politica.html"> Todos os direios reservados para AOPA</a>
+</footer>
+<script>
+// Função para realizar a requisição POST
+async function fazerRequisicao() {
+    try {
+        const response = await fetch("https://forge.withub.ai/api/triggers/5257a02d-c19b-4969-ab81-2206de86082c/execute/67014dc3d32fa8eec992015f", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({})
+        });
+        
+        const data = await response.json();
+        document.getElementById('resultado').textContent = JSON.stringify(data.data.texto);
+    } catch (error) {
+        // Exibe uma mensagem de erro caso haja falha na requisição
+        document.getElementById('resultado').textContent = "Erro ao realizar a requisição: " + error;
+    }
+}
+
+// Chama a função imediatamente
+fazerRequisicao();
+setInterval(fazerRequisicao, 30000);
+
+</script>
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>
